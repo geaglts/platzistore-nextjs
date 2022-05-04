@@ -1,0 +1,24 @@
+@import 'vars';
+
+.input {
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: $--md;
+    font-weight: bold;
+    height: 50px;
+    width: 300px;
+}
+
+input[type='button'].primary {
+    background-color: $--hospital-green;
+    border: none;
+    color: $--white;
+    @extend .input;
+}
+
+input[type='button'].secondary {
+    background-color: $--white;
+    border: 1px solid $--hospital-green;
+    color: $--hospital-green;
+    @extend .input;
+}

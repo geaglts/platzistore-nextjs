@@ -1,0 +1,71 @@
+@use './vars';
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 35px;
+    justify-self: center;
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form a {
+    font-size: var(--sm);
+    color: var(--hospital-green);
+    text-decoration: none;
+    margin-bottom: 52px;
+    text-align: center;
+}
+
+.label {
+    font-weight: bold;
+    font-size: var(--sm);
+    margin-bottom: 4px;
+}
+
+.input {
+    background-color: var(--text-input-field);
+    border: none;
+    font-size: var(--md);
+    border-radius: 8px;
+    padding: 6px 12px;
+    height: 30px;
+    margin-bottom: 12px;
+}
+
+.input-email {
+    margin-bottom: 20px;
+}
+
+.login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+    .logo {
+        display: block;
+    }
+
+    .signup-button {
+        position: absolute;
+        bottom: 20px;
+    }
+}

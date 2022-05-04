@@ -1,0 +1,35 @@
+@use './vars';
+
+.MobileMenu {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - (24px * 2));
+}
+
+.MobileMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.MobileMenu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.MobileMenu ul:nth-child(3) li {
+    margin-bottom: 0px;
+}
+
+.MobileMenu .email {
+    font-size: var(--md);
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.MobileMenu .sign-out {
+    font-size: var(--md);
+    color: var(--hospital-green);
+}

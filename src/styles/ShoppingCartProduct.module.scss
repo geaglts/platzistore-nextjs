@@ -1,0 +1,24 @@
+.ShoppingCartProduct {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.ShoppingCartProduct .ShoppingCartOrder {
+    margin: 0;
+}
+
+.ShoppingCartProduct .delete-product-button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ShoppingCartProduct .delete-product-button img {
+    width: 12px;
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+@use './vars';
+
+.MyAccount {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.MyAccount .form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+
+.MyAccount .title {
+    font-size: var(--lg);
+    margin-bottom: 32px;
+    text-align: start;
+}
+
+.MyAccount .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.MyAccount .label {
+    font-weight: bold;
+    font-size: var(--sm);
+    margin-bottom: 4px;
+}
+
+.MyAccount .value {
+    background-color: var(--text-input-field);
+    border: none;
+    font-size: var(--md);
+    border-radius: 8px;
+    padding: 13px 10px;
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.MyAccount .edit-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+    .MyAccount .form-container {
+        height: 100%;
+        padding-top: 24px;
+    }
+
+    .MyAccount .edit-button {
+        position: absolute;
+        width: 300px;
+        bottom: 0px;
+    }
+}
