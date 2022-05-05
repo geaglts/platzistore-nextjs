@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
-import '@styles/ProductCart.scss';
+import Image from 'next/image';
 
 import iconAddToCart from '@icons/bt_add_to_cart.svg';
 
 import AppContext from '@context/AppContext';
+
+import styles from '@styles/ProductCart.module.scss';
 
 const ProductCard = ({ product }) => {
     const { addToCart } = useContext(AppContext);
@@ -13,15 +15,26 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <div className="ProductCard">
-            <img src={product.images[0]} alt="dummy product" className="ProductCard-img" />
-            <div className="ProductCard-info">
+        <div className={styles.ProductCard}>
+            {new RegExp(/https?:\/\/.*/).test(product.images[0]) && (
+                <Image
+                    loader={() => product.images[0]}
+                    src={product.images[0]}
+                    unoptimized={true}
+                    alt="dummy product"
+                    className={styles['ProductCard-img']}
+                    width="100%"
+                    height="100%"
+                    layout="responsive"
+                />
+            )}
+            <div className={styles['ProductCard-info']}>
                 <div>
                     <p>${product.price}</p>
                     <p>{product.title}</p>
                 </div>
                 <figure onClick={() => handleClick(product)}>
-                    <img src={iconAddToCart} alt="add to cart button" />
+                    <Image src={iconAddToCart} alt="add to cart button" />
                 </figure>
             </div>
         </div>

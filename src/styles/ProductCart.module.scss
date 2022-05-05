@@ -1,11 +1,12 @@
-@use './vars';
+@import 'vars';
 
 .ProductCard {
-    width: var(--card-size);
+    $--card-size: 240px;
+    width: $--card-size;
 
     &-img {
         width: 100%;
-        height: var(--card-size);
+        height: $--card-size;
         border-radius: 20px;
         object-fit: cover;
     }
@@ -18,13 +19,13 @@
 
         div p:nth-child(1) {
             font-weight: bold;
-            font-size: var(--md);
+            font-size: $--md;
             margin: 0;
         }
 
         div p:nth-child(2) {
-            font-size: var(--sm);
-            color: var(--very-light-pink);
+            font-size: $--sm;
+            color: $--very-light-pink;
             margin: 0;
         }
 

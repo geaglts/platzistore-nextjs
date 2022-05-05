@@ -1,7 +1,7 @@
 .ProductList {
-    --card-size: 240px;
+    $--card-size: 240px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, var(--card-size));
+    grid-template-columns: repeat(auto-fill, $--card-size);
     gap: 26px;
     place-content: center;
     padding: 30px 0;
@@ -9,6 +9,6 @@
 
 @media (max-width: 640px) {
     .ProductList {
-        --card-size: 140px;
+        $--card-size: 140px;
     }
 }
