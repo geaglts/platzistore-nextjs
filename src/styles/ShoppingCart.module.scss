@@ -9,6 +9,16 @@
     }
 }
 
+.ShoppingCartContainer {
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(#000, 0.3);
+    position: absolute;
+    z-index: 1;
+}
+
 .ShoppingCart {
     width: 360px;
     padding: 0 12px 24px 12px;

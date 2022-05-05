@@ -29,7 +29,7 @@ const App = () => {
                         <Route exact path="/signup" component={CreateAccount} />
                         <Route exact path="/email-sended" component={EmailSend} />
                         <Route exact path="/my-account" component={MyAccount} />
-                        <Route exact path="/my-order" component={MyOrder} />
+                        <Route exact path="/my-order" component={MyOrder} /> {/* Checkout */}
                         <Route exact path="/my-orders" component={MyOrders} />
                         <Route exact path="/new-password" component={NewPassword} />
                         <Route exact path="/shopping-cart" component={ShoppingCart} />

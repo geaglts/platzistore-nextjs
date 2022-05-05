@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
                     <p>{product.title}</p>
                 </div>
                 <figure onClick={() => handleClick(product)}>
-                    <Image src={iconAddToCart} alt="add to cart button" />
+                    <Image className={styles.addToCart} src={iconAddToCart} alt="add to cart button" />
                 </figure>
             </div>
         </div>

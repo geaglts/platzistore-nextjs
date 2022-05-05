@@ -34,9 +34,15 @@
             cursor: pointer;
         }
 
-        figure > img {
+        .addToCart {
             width: 35px;
             height: 35px;
+            transition: all ease 350ms;
+
+            &:hover {
+                transition: all ease 250ms;
+                transform: rotate(-22.5deg);
+            }
         }
     }
 }

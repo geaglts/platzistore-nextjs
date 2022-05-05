@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import ProfileMenu from '@components/ProfileMenu';
 import ShoppingCart from '@containers/ShoppingCart';
@@ -29,7 +30,9 @@ const Header = () => {
         <nav className={styles.navbar}>
             <Image src={iconMenu} alt="menu" className={styles.menu} />
             <section className={styles['navbar-left']}>
-                <Image src={logoYardSale} alt="logo" className={styles['navbar-logo']} />
+                <Link href="/">
+                    <Image src={logoYardSale} alt="logo" className={styles['navbar-logo']} />
+                </Link>
                 <ul>
                     <li>
                         <a href="/">All</a>

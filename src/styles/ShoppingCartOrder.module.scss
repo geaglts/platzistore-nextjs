@@ -5,7 +5,6 @@
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
     gap: 16px;
-    margin-bottom: 24px;
 }
 
 .ShoppingCartOrder figure {
@@ -13,9 +12,6 @@
 }
 
 .ShoppingCartOrder figure img {
-    $--image-size: 60px;
-    width: $--image-size;
-    height: $--image-size;
     object-fit: cover;
     border-radius: 12px;
 }

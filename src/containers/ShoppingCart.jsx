@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 
 import FormButton from '@components/FormButton';
@@ -20,24 +21,28 @@ const ShoppingCart = ({ close }) => {
     };
 
     return (
-        <aside className={styles.ShoppingCart}>
-            <div className={styles['ShoppingCart-content']}>
-                <div className={styles['title-container']}>
-                    <button className={styles['close-shopping-cart']} onClick={close}>
-                        <Image src={iconArrow} alt="arrow" />
-                    </button>
-                    <h1 className={styles.title}>Shopping cart</h1>
+        <section className={styles.ShoppingCartContainer}>
+            <aside className={styles.ShoppingCart}>
+                <div className={styles['ShoppingCart-content']}>
+                    <div className={styles['title-container']}>
+                        <button className={styles['close-shopping-cart']} onClick={close}>
+                            <Image src={iconArrow} alt="arrow" />
+                        </button>
+                        <h1 className={styles.title}>Shopping cart</h1>
+                    </div>
+                    {state.cart.map((product, key) => (
+                        <ShoppingCartProduct product={product} key={`ShoppingCartProduct-${key}`} />
+                    ))}
+                    <div className={styles['shopping-total']}>
+                        <p>Total</p>
+                        <p>${sumTotal()}</p>
+                    </div>
+                    <Link href="/checkout">
+                        <FormButton label="Checkout" classes={[styles['checkout-button']]} onClick={close} />
+                    </Link>
                 </div>
-                {state.cart.map((product, key) => (
-                    <ShoppingCartProduct product={product} key={`ShoppingCartProduct-${key}`} />
-                ))}
-                <div className={styles['shopping-total']}>
-                    <p>Total</p>
-                    <p>${sumTotal()}</p>
-                </div>
-                <FormButton label="Checkout" classes={[styles['checkout-button']]} />
-            </div>
-        </aside>
+            </aside>
+        </section>
     );
 };
 
