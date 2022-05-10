@@ -8,7 +8,7 @@ const dummyProduct = {
         'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1645552346276',
     ],
     title: 'Nokia 2002',
-    price: '$220',
+    price: '220',
 };
 
 const ShoppingCartOrder = ({ product = dummyProduct }) => {
