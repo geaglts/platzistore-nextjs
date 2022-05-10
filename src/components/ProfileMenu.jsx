@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from '@styles/ProfileMenu.module.scss';
 
 const ProfileMenu = () => {
@@ -6,15 +7,15 @@ const ProfileMenu = () => {
         <div className={styles.ProfileMenu}>
             <ul>
                 <li>
-                    <a href="/" className="title">
+                    <Link href="/" className="title">
                         My orders
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">My account</a>
+                    <Link href="/">My account</Link>
                 </li>
                 <li>
-                    <a href="/">Sign out</a>
+                    <Link href="/">Sign out</Link>
                 </li>
             </ul>
         </div>

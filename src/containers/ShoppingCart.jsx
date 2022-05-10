@@ -38,7 +38,9 @@ const ShoppingCart = ({ close }) => {
                         <p>${sumTotal()}</p>
                     </div>
                     <Link href="/checkout">
-                        <FormButton label="Checkout" classes={[styles['checkout-button']]} onClick={close} />
+                        <span>
+                            <FormButton label="Checkout" classes={[styles['checkout-button']]} onClick={close} />
+                        </span>
                     </Link>
                 </div>
             </aside>

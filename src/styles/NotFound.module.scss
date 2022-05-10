@@ -1,0 +1,38 @@
+@import 'vars';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+
+    .notFoundImage {
+        $size: 350px;
+        max-width: $size;
+        min-width: 220px;
+    }
+
+    .notFoundMessage {
+        padding: 8px;
+        border-radius: 4px;
+        background-color: $--hospital-green;
+        color: $--text-input-field;
+        font-weight: bold;
+        font-size: 14pt;
+    }
+
+    .backToHome {
+        font-size: 11pt;
+        color: $--dark;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 250ms ease;
+
+        &:hover {
+            transition: all 350ms ease;
+            color: $--hospital-green;
+            transform: translateY(-4px);
+        }
+    }
+}

@@ -6,15 +6,8 @@ import useGetProducts from '@hooks/useGetProducts';
 
 import styles from '@styles/ProductList.module.scss';
 
-/**
- * Docs de la API 👉 https://api.escuelajs.co/docs/
- * API para desarrollo 👉 https://api.escuelajs.co/api/v1/
- */
-
-const API = 'https://api.escuelajs.co/api/v1/products';
-
 const ProductList = () => {
-    const { loading, products } = useGetProducts(API);
+    const { loading, products } = useGetProducts(process.env.NEXT_PUBLIC_API_URL);
     return (
         <div className={styles.ProductList}>
             {!loading && products.map((product, key) => <ProductCard product={product} key={key} />)}

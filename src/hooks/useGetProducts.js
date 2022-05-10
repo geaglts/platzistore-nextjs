@@ -5,17 +5,16 @@ const useGetProducts = (API) => {
     const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState([]);
 
-    const loadProducts = async () => {
-        setLoading(true);
-        const response = await axios.get(API);
-        setProducts(response.data);
-        setLoading(false);
-    };
-
     useEffect(() => {
+        const loadProducts = async () => {
+            setLoading(true);
+            const response = await axios.get(API);
+            setProducts(response.data);
+            setLoading(false);
+        };
         loadProducts();
         return () => {};
-    }, []);
+    }, [API]);
 
     return { products, loading };
 };
